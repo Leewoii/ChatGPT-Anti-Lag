@@ -20,7 +20,7 @@ The extension works **in real time while chatting**, keeping the interface respo
 
 ## Installation
 
-1. Download the **latest release**.
+1. Download the [**latest release**](https://github.com/Leewoii/ChatGPT-Anti-Lag/releases/download/v1.0.0/ChatGPT-Anti-Lag.rar).
 2. Extract the downloaded `.rar` file to any folder.
 3. Open your **Chromium-based browser** (Chrome, Brave, Edge, Opera, etc.).
 4. Go to the **Extensions** page.
