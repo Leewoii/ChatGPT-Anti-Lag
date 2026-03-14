@@ -1,5 +1,5 @@
 # ChatGPT Message Limiter
-
+<img src="https://github.com/Leewoii/ChatGPT-Anti-Lag/blob/main/icons/icon128.png?raw=true" height="128" width="128" /> 
 ## Overview
 ChatGPT Message Limiter is a browser extension designed to improve performance during long ChatGPT conversations.  
 It automatically hides older messages once a selected message limit is reached, reducing the number of rendered elements in the browser and minimizing lag.
