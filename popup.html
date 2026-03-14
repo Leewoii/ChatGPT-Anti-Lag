@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<meta charset="UTF-8" />
+<title>Visible Chats - Dracula Ice</title>
+<style>
+:root {
+  /* Dracula Official Palette */
+  --bg: #282a36;
+  --current-line: #44475a;
+  --foreground: #f8f8f2;
+  --comment: #6272a4;
+  --cyan: #8be9fd;
+  --green: #50fa7b;
+  --orange: #ffb86c;
+  --pink: #ff79c6;
+  --purple: #bd93f9;
+  --red: #ff5555;
+  --yellow: #f1fa8c;
+  
+  /* Functional Colors */
+  --accent: var(--purple);
+  --ice-glow: rgba(139, 233, 253, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--foreground);
+  min-width: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: var(--current-line);
+  border: 1px solid var(--comment);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5), 
+              0 0 15px var(--ice-glow); /* Subtle Ice Glow */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative Frost Corner */
+.container::before {
+  content: "❄";
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  font-size: 40px;
+  opacity: 0.1;
+  color: var(--cyan);
+  pointer-events: none;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+  text-align: center;
+  color: var(--cyan);
+  text-shadow: 0 0 8px rgba(139, 233, 253, 0.4);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 12px;
+}
+
+button {
+  width: 40px;
+  height: 40px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  background: var(--bg);
+  color: var(--pink);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  border-color: var(--pink);
+  box-shadow: 0 0 10px rgba(255, 121, 198, 0.3);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+input {
+  width: 60px;
+  height: 40px;
+  border-radius: 8px;
+  border: 2px solid var(--comment);
+  background: var(--bg);
+  color: var(--green);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--cyan);
+}
+
+/* Remove arrows from number input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.hint {
+  margin-top: 15px;
+  font-size: 11px;
+  text-align: center;
+  color: var(--comment);
+  line-height: 1.5;
+}
+
+.hint strong {
+  color: var(--orange);
+}
+
+.footer {
+  margin-top: 12px;
+  font-size: 10px;
+  text-align: center;
+  opacity: 0.5;
+  font-family: monospace;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="title">Visible Chats</div>
+
+  <div class="row">
+    <button id="decrease" title="Decrease"><i class="fa-solid fa-angle-left"></i></button>
+    <input id="limitInput" type="number" min="1" value="10">
+    <button id="increase" title="Increase"><i class="fa-solid fa-angle-right"></i></button>
+  </div>
+
+  <div class="hint">
+    Keeping your workspace <strong><a style="text-decoration: none; color: var(--orange);" href="https://github.com/Leewoii" target="_blank">frosty</a></strong>.<br>
+    Older messages are hidden.
+  </div>
+  
+  <div class="footer">v1.0.0</div>
+</div>
+
+<script src="popup.js"></script>
+
+</body>
+</html>
