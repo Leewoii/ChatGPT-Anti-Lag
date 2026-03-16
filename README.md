@@ -1,4 +1,4 @@
-# ChatGPT Message Limiter
+# ChatGPT Anti Lag on long chats
 <img src="https://github.com/Leewoii/ChatGPT-Anti-Lag/blob/main/icons/icon128.png?raw=true" height="128" width="128" /> 
 
 ## Overview
