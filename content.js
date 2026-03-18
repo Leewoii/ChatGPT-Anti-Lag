@@ -15,7 +15,11 @@ function getConversationArticles() {
   const thread = getThreadContainer();
   if (!thread) return [];
 
-  return Array.from(thread.querySelectorAll('article[data-testid^="conversation-turn-"]'))
+  return Array.from(
+    thread.querySelectorAll(
+      'article[data-testid^="conversation-turn-"], section[data-testid^="conversation-turn-"]'
+    )
+  )
     .map((article) => ({
       article,
       turn: extractTurnNumber(article)
